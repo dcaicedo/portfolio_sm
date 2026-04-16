@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Caicedo - Executive Presentation</title>
+    <style>
+        :root {
+            --apple-black: #1d1d1f;
+            --apple-dark-grey: #424245;
+            --apple-grey: #86868b;
+            --apple-light-grey: #f5f5f7;
+            --apple-blue: #0066cc;
+            --white: #ffffff;
+            --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * { box-sizing: border-box; }
+        body { 
+            margin: 0; 
+            padding: 40px 0; 
+            background-color: #e5e5e5; 
+            font-family: var(--font-stack); 
+            color: var(--apple-black);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Slide Dimensions: Standard 16:9 */
+        .slide {
+            width: 1280px;
+            height: 720px;
+            background: var(--white);
+            position: relative;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        /* Slide Content Areas */
+        .slide-padding {
+            padding: 60px 100px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Typography */
+        .headline {
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 40px;
+            color: var(--apple-black);
+        }
+
+        h2 {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--apple-blue);
+            margin: 0 0 16px 0;
+        }
+
+        p { 
+            font-size: 22px; 
+            line-height: 1.5; 
+            color: var(--apple-dark-grey); 
+            margin-bottom: 24px; 
+            font-weight: 400; 
+        }
+
+        /* Layout Helpers */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; flex: 1; align-items: center; }
+        .flex-fill { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
+        /* Cover Slide Specifics */
+        .cover-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 100px;
+            background: linear-gradient(135deg, #f5f5f7 0%, #ffffff 100%);
+        }
+        .cover-title { font-size: 96px; font-weight: 800; letter-spacing: -0.05em; margin: 0; }
+        .cover-subtitle { font-size: 32px; color: var(--apple-grey); margin-top: 10px; font-weight: 300; }
+
+        /* Components */
+        .metric-block { margin-bottom: 40px; }
+        .metric-number { font-size: 84px; font-weight: 700; color: var(--apple-black); line-height: 1; letter-spacing: -0.04em; }
+        .metric-label { font-size: 18px; color: var(--apple-grey); font-weight: 500; text-transform: uppercase; margin-top: 5px; }
+
+        .feature-box {
+            background: var(--apple-light-grey);
+            padding: 32px;
+            border-radius: 16px;
+            height: 100%;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 40px;
+            left: 100px;
+            right: 100px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--apple-grey);
+            border-top: 1px solid var(--apple-light-grey);
+            padding-top: 20px;
+        }
+
+        /* Image Handling */
+        .bleed-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        /* List Styling */
+        ul { list-style: none; padding: 0; }
+        li { 
+            font-size: 21px; 
+            margin-bottom: 16px; 
+            display: flex; 
+            align-items: flex-start;
+            color: var(--apple-dark-grey);
+        }
+        li::before { 
+            content: "•"; 
+            color: var(--apple-blue); 
+            font-weight: bold; 
+            margin-right: 15px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- SLIDE 1: TITLE SLIDE -->
+    <div class="slide">
+        <div class="cover-content">
+            <h2>Transformation & Delivery</h2>
+            <h1 class="cover-title">David Caicedo</h1>
+            <div class="cover-subtitle">Scrum Master & Agile Project Manager</div>
+            <p style="margin-top: 40px; font-size: 18px; color: var(--apple-blue); font-weight: 600; letter-spacing: 0.05em;">
+                VANCOUVER, BC | MBA | STRATEGIC CHANGE LEADERSHIP
+            </p>
+        </div>
+        <div class="footer">
+            <span>Executive Portfolio 2024</span>
+            <span>Slide 01</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 2: EXECUTIVE SUMMARY -->
+    <div class="slide">
+        <div class="slide-padding">
+            <h2>Executive Summary</h2>
+            <div class="headline">Building organizational systems for delivery excellence.</div>
+            <div class="grid-2">
+                <div class="flex-fill">
+                    <p>Dynamic leader specialized in <strong>greenfield implementations</strong>—building agile teams and governance frameworks from scratch for complex enterprises.</p>
+                    <ul>
+                        <li><strong>Implementation Specialist:</strong> From zero to 15+ high-performing squads.</li>
+                        <li><strong>Change Catalyst:</strong> Expert in ADKAR-based transformation leadership.</li>
+                        <li><strong>Strategic Alignment:</strong> Linking engineering flow to C-Suite OKRs.</li>
+                    </ul>
+                </div>
+                <div class="flex-fill">
+                    <div class="metric-block">
+                        <div class="metric-number">95%</div>
+                        <div class="metric-label">Sprint Predictability Rate</div>
+                    </div>
+                    <div class="metric-block">
+                        <div class="metric-number">30%</div>
+                        <div class="metric-label">Faster Time-to-Market</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <span>David Caicedo | Transformation Leadership</span>
+            <span>Slide 02</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 3: CAPABILITIES -->
+    <div class="slide">
+        <div class="slide-padding">
+            <h2>Core Competencies</h2>
+            <div class="headline">Orchestrating transformation through three pillars.</div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; flex: 1;">
+                <div class="feature-box">
+                    <h3 style="font-size: 22px; margin-bottom: 15px;">Change Management</h3>
+                    <p style="font-size: 17px;">Navigating organizational friction using structured frameworks to ensure sustainable behavioral shifts across legacy departments.</p>
+                </div>
+                <div class="feature-box">
+                    <h3 style="font-size: 22px; margin-bottom: 15px;">Implementation From Scratch</h3>
+                    <p style="font-size: 17px;">Expertise in launching "Greenfield" business units, including hiring, tool-chain setup (Jira/Azure DevOps), and culture setting.</p>
+                </div>
+                <div class="feature-box">
+                    <h3 style="font-size: 22px; margin-bottom: 15px;">Systems Thinking</h3>
+                    <p style="font-size: 17px;">Optimizing the entire value stream—from business ideation to production—removing global bottlenecks for maximum throughput.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <span>Strategic Pillars</span>
+            <span>Slide 03</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 4: CASE STUDY 1 -->
+    <div class="slide">
+        <div class="slide-padding">
+            <h2>Success Story: Lima Airport Partners</h2>
+            <div class="headline">Modernizing aviation infrastructure via Hybrid Agile.</div>
+            <div class="grid-2">
+                <div style="height: 400px;">
+                    <img src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&q=80&w=800" class="bleed-image" alt="Airport">
+                </div>
+                <div class="flex-fill">
+                    <h3>The Transformation</h3>
+                    <p style="font-size: 18px;">Pivoted a multi-year infrastructure program from siloed waterfall to a unified delivery engine.</p>
+                    <ul style="margin-top: 10px;">
+                        <li style="font-size: 18px;">Designed "Flight Plan" PMO from scratch.</li>
+                        <li style="font-size: 18px;">Coached 10+ operational & IT teams.</li>
+                        <li style="font-size: 18px;"><strong>30% lead-time reduction</strong> in milestones.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <span>Aviation Industry Modernization</span>
+            <span>Slide 04</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 5: CASE STUDY 2 -->
+    <div class="slide">
+        <div class="slide-padding">
+            <h2>Success Story: Pacífico Seguros</h2>
+            <div class="headline">Building a digital factory for scaled insurance.</div>
+            <div class="grid-2">
+                <div class="flex-fill">
+                    <h3>Zero-to-One Implementation</h3>
+                    <p style="font-size: 18px;">Engineered the transition from traditional IT cost-center to a revenue-generating digital organization.</p>
+                    <ul style="margin-top: 10px;">
+                        <li style="font-size: 18px;">Built first 15 agile product squads from scratch.</li>
+                        <li style="font-size: 18px;">Embedded Quality Engineering in the DoD.</li>
+                        <li style="font-size: 18px;"><strong>25% reduction</strong> in production defects.</li>
+                    </ul>
+                </div>
+                <div style="height: 400px;">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800" class="bleed-image" alt="Office">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <span>Insurance Digital Transformation</span>
+            <span>Slide 05</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 6: BC MARKET VALUE -->
+    <div class="slide">
+        <div class="slide-padding">
+            <h2>Vancouver Market Advantage</h2>
+            <div class="headline">Leadership tailored for the BC Tech Ecosystem.</div>
+            <div class="grid-2">
+                <div class="flex-fill">
+                    <p>Combining <strong>MBA-level business strategy</strong> with deep technical agility to drive local enterprise growth.</p>
+                    <div style="background: var(--apple-blue); color: white; padding: 40px; border-radius: 20px;">
+                        <h3 style="color: white; margin-bottom: 20px;">The David Caicedo Edge</h3>
+                        <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 0;">"Bridging the gap between rigid corporate structures and high-velocity engineering teams in the Pacific Northwest."</p>
+                    </div>
+                </div>
+                <div class="flex-fill">
+                    <div style="border-left: 2px solid var(--apple-light-grey); padding-left: 40px;">
+                        <h3>Core Differentiators</h3>
+                        <ul style="margin-top: 20px;">
+                            <li>MBA from UCW Vancouver</li>
+                            <li>Bilingual (English/Spanish)</li>
+                            <li>SAFe, CSM, & PMP Alignment</li>
+                            <li>Remote-First Leadership Expert</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <span>Vancouver, BC | MBA</span>
+            <span>Slide 06</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 7: CONTACT -->
+    <div class="slide" style="background: var(--apple-black); color: var(--white);">
+        <div class="slide-padding" style="justify-content: center; align-items: center; text-align: center;">
+            <h2 style="color: var(--apple-blue);">Get in Touch</h2>
+            <div class="headline" style="color: var(--white); font-size: 64px; margin-bottom: 20px;">Let’s transform your delivery engine.</div>
+            <p style="color: var(--apple-grey); max-width: 700px; margin-bottom: 60px;">Available for Senior Scrum Master, Agile PM, or Transformation Lead roles in British Columbia.</p>
+            
+            <div style="display: flex; gap: 80px;">
+                <div>
+                    <div style="font-size: 14px; color: var(--apple-grey); text-transform: uppercase; margin-bottom: 10px;">Email</div>
+                    <div style="font-size: 24px; font-weight: 600;">david.caicedo.c@gmail.com</div>
+                </div>
+                <div>
+                    <div style="font-size: 14px; color: var(--apple-grey); text-transform: uppercase; margin-bottom: 10px;">LinkedIn</div>
+                    <div style="font-size: 24px; font-weight: 600;">linkedin.com/in/davidcaicedo</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer" style="border-top-color: #333;">
+            <span>David Caicedo, MBA</span>
+            <span>2024</span>
+        </div>
+    </div>
+
+</body>
