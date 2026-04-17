@@ -11,7 +11,32 @@ const carouselItems = [
     { type: 'video', src: 'images/profile-9.MOV', caption: 'Profile 9' },
     { type: 'video', src: 'images/profile-10.MOV', caption: 'Profile 10' },
     { type: 'img', src: 'images/profile-11.JPG', caption: 'Profile 11' },
-    { type: 'video', src: 'images/profile-12.MOV', caption: 'Profile 12' }
+    { type: 'video', src: 'images/profile-12.MOV', caption: 'Profile 12' },
+    { type: 'img', src: 'images/profile-13.JPG', caption: 'Profile 13' },
+    { type: 'img', src: 'images/profile-14.JPG', caption: 'Profile 14' },
+    { type: 'video', src: 'images/profile-15.MOV', caption: 'Profile 15' },
+    { type: 'img', src: 'images/profile-16.jpg', caption: 'Profile 16' },
+    { type: 'img', src: 'images/profile-17.JPG', caption: 'Profile 17' },
+    { type: 'img', src: 'images/profile-18.JPG', caption: 'Profile 18' },
+    { type: 'img', src: 'images/profile-19.jpg', caption: 'Profile 19' },
+    { type: 'video', src: 'images/profile-20.MOV', caption: 'Profile 20' },
+    { type: 'img', src: 'images/profile-21.JPG', caption: 'Profile 21' },
+    { type: 'img', src: 'images/profile-22.JPG', caption: 'Profile 22' },
+    { type: 'img', src: 'images/profile-23.jpg', caption: 'Profile 23' },
+    { type: 'img', src: 'images/profile-24.jpg', caption: 'Profile 24' },
+    { type: 'video', src: 'images/profile-25.MOV', caption: 'Profile 25' },
+    { type: 'img', src: 'images/profile-26.jpg', caption: 'Profile 26' },
+    { type: 'img', src: 'images/profile-27.JPG', caption: 'Profile 27' },
+    { type: 'img', src: 'images/profile-28.JPG', caption: 'Profile 28' },
+    { type: 'img', src: 'images/profile-29.JPG', caption: 'Profile 29' },
+    { type: 'img', src: 'images/profile-30.JPG', caption: 'Profile 30' },
+    { type: 'img', src: 'images/profile-31.JPG', caption: 'Profile 31' },
+    { type: 'img', src: 'images/profile-32.JPG', caption: 'Profile 32' },
+    { type: 'img', src: 'images/profile-33.JPG', caption: 'Profile 33' },
+    { type: 'img', src: 'images/profile-34.JPG', caption: 'Profile 34' },
+    { type: 'img', src: 'images/profile-35.jpg', caption: 'Profile 35' },
+    { type: 'img', src: 'images/profile-36.jpg', caption: 'Profile 36' },
+    { type: 'img', src: 'images/profile-37.jpg', caption: 'Profile 37' }
 ];
 let carouselIndex = 0;
 
