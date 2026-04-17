@@ -144,9 +144,101 @@
             margin-right: 15px;
         }
 
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .gallery-item {
+            aspect-ratio: 1;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            background: var(--apple-light-grey);
+        }
+        .gallery-item img, .gallery-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img, .gallery-item:hover video {
+            transform: scale(1.05);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox img, .lightbox video {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            font-weight: 300;
+        }
+
     </style>
+    <script>
+        function openLightbox(element) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxContent = lightbox.querySelector('.lightbox-content');
+            
+            // Clone the element (img or video)
+            lightboxContent.innerHTML = '';
+            const clone = element.cloneNode(true);
+            clone.style.width = 'auto';
+            clone.style.height = 'auto';
+            lightboxContent.appendChild(clone);
+            
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this || e.target.classList.contains('lightbox-close')) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
 </head>
 <body>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content" onclick="event.stopPropagation()"></div>
+    </div>
 
     <!-- SLIDE 1: TITLE SLIDE -->
     <div class="slide">
@@ -327,6 +419,32 @@
         <div class="footer" style="border-top-color: #333;">
             <span>David Caicedo, MBA</span>
             <span>2024</span>
+        </div>
+    </div>
+
+    <!-- SLIDE 8: GALLERY LIGHTBOX -->
+    <div class="slide">
+        <div class="slide-padding">
+            <h2>Portfolio Gallery</h2>
+            <div class="headline">Click any image to view in lightbox.</div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/profile-1.jpg" alt="Profile 1" onclick="openLightbox(this)"></div>
+                <div class="gallery-item"><img src="images/profile-2.jpg" alt="Profile 2" onclick="openLightbox(this)"></div>
+                <div class="gallery-item"><img src="images/profile-3.jpg" alt="Profile 3" onclick="openLightbox(this)"></div>
+                <div class="gallery-item"><video src="images/profile-4.mp4" onclick="openLightbox(this)"></video></div>
+                <div class="gallery-item"><img src="images/profile-5.JPG" alt="Profile 5" onclick="openLightbox(this)"></div>
+                <div class="gallery-item"><img src="images/profile-6.JPG" alt="Profile 6" onclick="openLightbox(this)"></div>
+                <div class="gallery-item"><video src="images/profile-7.MOV" onclick="openLightbox(this)"></video></div>
+                <div class="gallery-item"><img src="images/profile-8.JPG" alt="Profile 8" onclick="openLightbox(this)"></div>
+                <div class="gallery-item"><video src="images/profile-9.MOV" onclick="openLightbox(this)"></video></div>
+                <div class="gallery-item"><video src="images/profile-10.MOV" onclick="openLightbox(this)"></video></div>
+                <div class="gallery-item"><img src="images/profile-11.JPG" alt="Profile 11" onclick="openLightbox(this)"></div>
+                <div class="gallery-item"><video src="images/profile-12.MOV" onclick="openLightbox(this)"></video></div>
+            </div>
+        </div>
+        <div class="footer">
+            <span>Image Gallery</span>
+            <span>Slide 08</span>
         </div>
     </div>
 
