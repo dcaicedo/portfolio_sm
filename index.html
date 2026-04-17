@@ -221,14 +221,16 @@
             document.getElementById('lightbox').classList.remove('active');
         }
 
-        document.getElementById('lightbox').addEventListener('click', function(e) {
-            if (e.target === this || e.target.classList.contains('lightbox-close')) {
-                closeLightbox();
-            }
-        });
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('lightbox').addEventListener('click', function(e) {
+                if (e.target === this || e.target.classList.contains('lightbox-close')) {
+                    closeLightbox();
+                }
+            });
 
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeLightbox();
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeLightbox();
+            });
         });
     </script>
 </head>
